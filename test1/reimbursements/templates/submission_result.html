@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Submission Result</title>
+		<style>
+			body {font-family: sans-serif}
+			body>p {margin:0;padding:.3em 0 .3em 0}
+			p>strong {display: inline-block; width: 90pt; color: navy; font-weight: normal}
+		</style>
+	</head>
+	<body>
+		<h1>Submission Result</h1>
+		<p><strong>Product Name</strong>: {{ submission.product_name }}</p>
+		<p><strong>Category</strong>: {{ submission.category }}</p>
+		<p><strong>Merchant</strong>: {{ submission.merchant }}</p>
+		<p><strong>Eligible</strong>: {{ submission.eligible|yesno:"Yes,No" }}</p>
+		<p><strong>Confidence</strong>: {{ submission.confidence }}</p>
+		<p><a href="{% url 'submit' %}">Submit another request</a></p>
+	</body>
+</html>
